@@ -1,11 +1,21 @@
 import { useState } from "react";
-import { createBrowserRouter, RouterProvider, Route } from "react-router-dom";
+import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import "./App.css";
+
+const Layout = () => {};
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <div>Hello world!</div>,
+    element: <Home />,
+  },
+  {
+    path: "/products/:id",
+    element: <Products />,
+  },
+  {
+    path: "/products/:id",
+    element: <Product />,
   },
 ]);
 
